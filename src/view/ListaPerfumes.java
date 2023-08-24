@@ -177,7 +177,7 @@ public class ListaPerfumes extends javax.swing.JFrame {
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
         listaPerf.add(txtPerfume.getText());
-        JOptionPane.showMessageDialog(null, "Salvo!");
+        JOptionPane.showMessageDialog(null, "Salvo com sucesso");
         txtPerfume.setText(null);
     }//GEN-LAST:event_btSalvarActionPerformed
 
@@ -185,14 +185,14 @@ public class ListaPerfumes extends javax.swing.JFrame {
         int i;
         i = Integer.parseInt(JOptionPane.showInputDialog("Digite o número do perfume para excluir:"));
         if (listaPerf.isEmpty()){
-            JOptionPane.showMessageDialog(null, "Lista vazia");
+            JOptionPane.showMessageDialog(null, "Lista vazia xiru");
         }else{
             if ((i-1) >= 0 && (i-1) < listaPerf.size()){
                 listaPerf.remove(i-1);
-                JOptionPane.showMessageDialog(null, "Removido com sucesso!!!!!");
+                JOptionPane.showMessageDialog(null, "Removido com sucesso");
                 btListarActionPerformed(evt);
             }else{
-                JOptionPane.showMessageDialog(null, "Não existe!!");
+                JOptionPane.showMessageDialog(null, "Não existe :/");
             }
         }
     }//GEN-LAST:event_btExcluirActionPerformed
@@ -219,7 +219,7 @@ public class ListaPerfumes extends javax.swing.JFrame {
         String nome = JOptionPane.showInputDialog("Digite o novo nome do perfume:");
         if((i-1) >= 0 && (i-1) < listaPerf.size()){
             listaPerf.set((i-1),nome);
-            JOptionPane.showMessageDialog(null, "Renomeado!");
+            JOptionPane.showMessageDialog(null, "Renomeado");
             btListarActionPerformed(evt);
         }else{
             JOptionPane.showMessageDialog(null, "Inválido");
@@ -239,13 +239,13 @@ public class ListaPerfumes extends javax.swing.JFrame {
 
         for (int c = 0; c < listaPerf.size(); c++){
             if (listaPerf.get(c).equals(pesquisa)){
-                JOptionPane.showMessageDialog(null, "Este perfume existe!");
+                JOptionPane.showMessageDialog(null, "Este perfume existe de fato");
                 encontrado = true;
                 break;
             }
         }
         if (!encontrado){
-            JOptionPane.showMessageDialog(null, "Este perfume não existe.");
+            JOptionPane.showMessageDialog(null, "Este perfume não existe mano.");
         } 
     }//GEN-LAST:event_btPesquisarActionPerformed
 
